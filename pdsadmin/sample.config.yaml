@@ -1,0 +1,2 @@
+admin_password: a_secure_password
+hostname: pds.example.com # without protocol (https) or path
