@@ -1,0 +1,13 @@
+when:
+  - event: ["tag"]
+    branch: ["main"]
+
+dependencies:
+  nixpkgs:
+    - go
+    - goreleaser
+
+steps:
+  - name: create release
+    command: |
+      goreleaser release --clean

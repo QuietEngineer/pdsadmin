@@ -1,0 +1,27 @@
+when:
+  - event: ["push", "pull_request"]
+    branch: ["main", "develop"]
+  - event: ["manual"]
+
+dependencies:
+  nixpkgs:
+    - go
+    - golangci-lint
+
+steps:
+  - name: format
+    command: |
+      gofmt -l .
+
+  - name: lint
+    command: |
+      golangci-lint --version
+      golangci-lint run ./...
+
+  - name: build application
+    command: |
+      go build -v ./...
+
+  - name: test application
+    command: |
+      go test -v ./...
