@@ -2,6 +2,8 @@ when:
   - event: ["tag"]
     branch: ["main"]
 
+engine: "nixery"
+
 dependencies:
   nixpkgs:
     - go

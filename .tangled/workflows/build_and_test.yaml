@@ -3,6 +3,8 @@ when:
     branch: ["main", "develop"]
   - event: ["manual"]
 
+engine: "nixery"
+
 dependencies:
   nixpkgs:
     - go
