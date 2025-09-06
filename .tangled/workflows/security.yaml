@@ -1,0 +1,32 @@
+when:
+  - event: ["push", "pull_request"]
+    branch: ["main", "develop"]
+  - event: ["manual"]
+
+engine: "nixery"
+
+dependencies:
+  nixpkgs:
+    - go
+    - snyk
+
+environment:
+  SNYK_DISABLE_ANALYTICS: 1
+
+steps:
+  - name: build application
+    command: |
+      go build -v ./...
+
+  - name: snyk auth
+    command: |
+      snyk auth "$SNYK_TOKEN"
+
+  - name: snyk test
+    command: |
+      snyk monitor --all-projects
+      snyk test --all-projects
+
+  - name: snyk code test
+    command: |
+      snyk code test --json-file-output=snyk_code.json
