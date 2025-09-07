@@ -1,6 +1,5 @@
 when:
-  - event: ["tag"]
-    branch: ["main"]
+  - event: ["manual"]
 
 engine: "nixery"
 
