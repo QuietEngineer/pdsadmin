@@ -21,7 +21,7 @@ THE SOFTWARE.
 */
 package main
 
-import "github.com/QuietEngineer/pdsadmin/cmd"
+import "tangled.sh/quietengineer.fyi/pdsadmin/cmd"
 
 func main() {
 	cmd.Execute()

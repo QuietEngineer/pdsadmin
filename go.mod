@@ -1,4 +1,4 @@
-module github.com/QuietEngineer/pdsadmin
+module tangled.sh/quietengineer.fyi/pdsadmin
 
 go 1.23.6
 
