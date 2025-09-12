@@ -1,8 +1,13 @@
 ---
 commitizen:
+  annotated_tag: true
+  bump_message: 'chore(bump): version $current_version -> $new_version'
   major_version_zero: true
   name: cz_conventional_commits
   tag_format: v$version
   update_changelog_on_bump: true
-  version_provider: scm
+  version: "0.0.1"
+  version_files:
+  - cmd/root.go:Version
+  version_provider: commitizen
   version_scheme: semver2
