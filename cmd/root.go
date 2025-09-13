@@ -39,7 +39,7 @@ var rootCmd = &cobra.Command{
 	Long: `PDSAdmin is a tool for interacting with a PDS you own.
 
 This implementation tries to be comparable with [bluesky-social's](https://github.com/bluesky-social/pds).`,
-	Version: "0.0.1",
+	Version: "0.1.0",
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	// Run: func(cmd *cobra.Command, args []string) { },
